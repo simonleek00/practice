@@ -5,7 +5,7 @@ This workflow will help you use beautiful soup in Python to put together useful 
 This workflow will not be comprehensive by any means, but the goal is to cover enough to get you through a simple data collection project or to get you started with a larger project. It will assume some very basic Python programing knowledge such as how for loops and if statements work. To an extent, code in this workflow will sacrifice programming style to be as readable as possible for people with minimal Python experience. Rather than tackling one large complex task, it will go through a few simple but useful ways to use Beautiful Soup to scrape information from webpages. The full documented code is available at the bottom of this page should you want to see everything together.
 
 ## Set up:
-You will have to have installed python to follow this tutorial. You can download python [HERE].
+You will have to have installed python to follow this tutorial. You can download python [here.](https://www.python.org/downloads/). 
 Open a new document in a text editor of your choice. You should save the file as a Python document by using the extension ".py". I will refer to my document as "scraping.py."
 Open a new terminal and navigate to the directory where you saved your Python document using the command `ls` to list directories and the command `cd` to change directories. (On Mac, you can simply navigate to the folder in which your scraping.py document exists and right click on the folder. From the dropdown, select “New Terminal at Folder.) You’ll know you have the correct folder when the name of the folder appears in the Terminal window before the prompt.
 Install the dependencies for Beautiful Soup. First make sure that you have Python 3 on your machine. In terminal type the commands:
@@ -40,6 +40,7 @@ This will run the file named "scraping.py". Any printed output will appear in th
 
 Often you will want to gather all the links on a specific page in order to later do something with them. (If you wanted to scrape the contents of a list of links, for instance, you might start at the homepage, collect every link there, and then visit each linked page and scrape them to collect the text there.) Let’s use Beautiful Soup to collect all the links on this page: https://www.scrapethissite.com/pages/.
 Your code will be accessing the HTML of the page, which looks like this:
+![html](htmlmainpage.png)
 
 In HTML, the links that we are looking for appear in a specific form:
 `<a href = ”some_link” > Display Name for Link </a>`
@@ -79,7 +80,7 @@ for link in links:
 ```
 
 Now (save and) run the program again. You should see a printout like this in the terminal:
-
+![relative](relativelinks.png)
 
 To turn these relative paths into full urls, we could make a small change to the way the printing loop works, replacing the for loop above with this one that adds the base url at the beginning:
 
@@ -91,14 +92,13 @@ for  link in links:
 
 Now the program gives the output we set out to create:
 
-
-
-
-
+![filteredlinks](nonrelativelinks.png)
 
 ## Case 2: Filter Which Links are Collected.
 
 Imagine we only wanted to get the urls of the items in the actual list on the page, those that appear under “Web Scraping Sandbox,” and to discard all the extra links not in the main part of the page (like FAQ, login, etc).
+
+![mainpage](sandboxpage.png)
 
 If we look at the different kind of links we collected (or hover over these items on the real page) we see that all of these items’ urls start with "/pages/". To filter, we can just use the python function `startswith()` to see if each url starts with “/pages/” or not. We’ll also impose another condition: that the url goes on past that "/pages/", otherwise we would only be getting back the url of the current page. If it does, we’ll add it to a running list. Once we’ve gone through every item in links we’ll have populated the new list `pages_links` with only these items. The code looks like this:
 
@@ -117,7 +117,7 @@ for  link in links:
 
 (If you wanted to then turn these filtered links into full links, you could employ the method from earlier.) Run the code now and you should see the output we were looking for:
 
-
+![filteredlinks](filteredlinks.png)
 
 
 ## Case 3: Scrape Text
@@ -144,12 +144,15 @@ for text in texts:
 
 Which prints out the description paragraph under each link.
 
+![descriptions](pagecontentsprintout.png)
 
 ## Case 4: Combining techniques and writing to a .txt file
 
 Let’s take on a more complex task. Imagine we wanted to start on the page we’ve been using and then scrape the text from the pages linked there (the ones under the “Web Scraping Sandbox” heading). We can combine what we’ve learned so far to achieve this. In addition, we can learn something new: how to write to a file.
 
 Writing to a file in python is not as hard as it sounds. First, create the file you want to populate. For this example, make a blank text file called "pagecontents.txt". Our code will look like this:
+
+![textcode](savetotextfilecode.png)
 
 The only new ideas here involve the file writing, which is done in two unfamiliar lines:
   ```
@@ -162,10 +165,12 @@ The first part tells the program which file to write into and the second writes 
 
 ## Case 5: Worked Example and Spreadsheets
 
-Located at (https://www.scrapethissite.com/pages/simple/) is a site that with information structured like this:
+Located at (https://www.scrapethissite.com/pages/simple/) is a site with information structured like this:
+![countrypage](countries.png)
 
 For this final task, we are going to try and scrape the data in a more structured way (rather than as a mess of text). Instead of writing to a .txt file, we’ll write to a .csv so that we can look at the data as a spreadsheet.
 The data for each entry is stores in HTML that looks like this:
+![htmlcountry](htmlcountry.png)
 
 In order to access the information we want, then, we have to pay attention to the tags and class names. These let us pull information from the code. First, we create a list of countries by taking all the blocks that look like the one above.
 ```
@@ -182,10 +187,13 @@ c_area = country.div.find(class_ = "country-area").contents[0]
 ```
 
 Each of these lines is just specifying for the program how to navigate the HTML code. In the first one, for example, we specify the `h3` tag to get to the area where the country name (e.g. Andorra) is stored. Then, `.contents[2]` gives us the second line (the one we care about) within the `h3` block. Finally, `.get_text(strip=True)` trims the whitespace, as we’ve already seen. The other lines employ similar methods to extract the capital, population, and area. If you are trying to work out how to do something similar on a different website with data in a different structure (and if you are feeling brave) check out the Beautiful Soup Quick Start guide [here.](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#quick-start)
-Finally, a little extra code lets us write these values into a .csv. (Be sure to add `import csv` to the top of your program!) A look at the final code:
+Finally, a little extra code lets us write these values into a .csv. (Be sure to add `import csv` to the top of your program!) A look at the final code (also available as text below): 
+
+![savetocsvcode](savetocsvcode.png)
 
 And the resulting spreadsheet:
 
+![spreadsheetyay](createdspreadsheet.png)
 
 # Full Code and Conclusion:
 
