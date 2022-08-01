@@ -17,7 +17,7 @@ To complete the setup, open a text editor (TextEdit will work fine) and save an 
 
 ## Running the File 
 
-Navigate in the terminal to the "NYT Scraping" folder, either by right clicking and selecting "New Terminal at Folder" or by using `cd` commands to navigate to it. (For example, if it was in your documents folder, you would start with the command `cd Documents` and then type `cd "NYT Scraping`).
+Navigate in the terminal to the "NYT Scraping" folder, either by right clicking and selecting "New Terminal at Folder" or by using `cd` commands to navigate to it. (For example, if it was in your documents folder, you would start with the command `cd Documents` and then type `cd "NYT Scraping"`).
 
 Now type or paste into the terminal this command to run the program:
 
