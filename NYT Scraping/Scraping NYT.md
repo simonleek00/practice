@@ -9,7 +9,7 @@ To do this, first select the column that contains the urls you want to scrape an
 
 Using either Export or Save As, save this file as a `.csv` file with a name like `nytlinks.csv`. Put it in a new, empty folder called "NYT Scraping."
 
-Download to this folder the following file titled `nytscraper.py`: [link to the file.]
+Download to this folder the following file titled `nytscraper.py`: [nytscraper.py.](nytscraper.py)
 
 Open the Terminal and run the following commands: [import/download relevant python stuff, bs stuff, etc.]
 
