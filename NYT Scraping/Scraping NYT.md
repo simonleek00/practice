@@ -1,7 +1,7 @@
 # Scraping NYT Using Beautiful Soup
 
 ## Setup 
-After you have created a spreadsheet using the python programs for NYT searching, you may want to find the full text of these articles. 
+After you have created a spreadsheet with the results of your NYT search, you may want to find the full text of these articles. 
 
 To do this, first select the column that contains the urls you want to scrape and copy it into a new spreadsheet. The new file should have just the one column containing the urls you want to visit. It should look like this:
 
