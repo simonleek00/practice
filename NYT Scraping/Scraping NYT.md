@@ -5,7 +5,7 @@ After you have created a spreadsheet using the python programs for NYT searching
 
 To do this, first select the column that contains the urls you want to scrape and copy it into a new spreadsheet. The new file should have just the one column containing the urls you want to visit. It should look like this:
 
-[picture of single column spreadsheet]
+[single column](singlecolumn.png)
 
 Using either Export or Save As, save this file as a `.csv` file with a name like `nytlinks.csv`. Put it in a new, empty folder called "NYT Scraping."
 
@@ -29,7 +29,7 @@ and press enter. It may take a moment for the program to run. You'll know it's d
 
 Now open the file `articlefulltext.csv`. You should see it populated with three columns: date, url, and full text, like this:
 
-[picture of spreadsheet complete]
+[complete sheet](finishedsheet.png)
 
 You can now save this file with a new name and proceed as you want with it! 
 
