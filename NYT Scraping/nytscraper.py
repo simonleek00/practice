@@ -15,7 +15,10 @@ with open('nytlinks.csv', 'r') as fil1:
         page_soup = BeautifulSoup(response.content, features="lxml")
 
         # add the contents of the new article to collected
-        articles_text.append(page_soup.get_text(" ", strip=True))
+        full_text = ""
+        for x in page_soup.find_all('p'):
+            full_text = full_text + x.get_text() + "\n"
+        articles_text.append(full_text)
 
     with open('articlefulltext.csv', 'w') as fil2:
         # Create a writer
@@ -25,16 +28,11 @@ with open('nytlinks.csv', 'r') as fil1:
 
         # Populate the spreadsheet
         i = 0
-
         for article in articles:
             # Get the date from the url
             date = article[24:34]
 
-            # Trim header information off of article text
-            start = articles_text[i].index("Read in app")
-            trimmed_text = articles_text[i][start+11:]
-
-            writer.writerow([date, article, trimmed_text])
+            writer.writerow([date, article, articles_text[i]])
             i = i + 1
 
 print("Done Scraping!")
