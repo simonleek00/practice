@@ -7,7 +7,7 @@ This workflow will take you through the process of getting access to, searching,
 First you will have to procure a Guardian API Key: ([register on developer's site and request a key for the "articles" API.](https://open-platform.theguardian.com/access/)) 
 
 To search The Guardian using the Guardian's API Console: 
-    In a web browser, go to the URL of the Guardian's "Open Platform API Console" (beta version, not the old version): <http://open-platform.theguardian.com/explore/>
+    In a web browser, go to the URL of the Guardian's "Open Platform API Console": <http://open-platform.theguardian.com/explore/>
 
 When the Guardian's API console search form loads, check the box in that form for "Show All Filters."  Then fill in the following fields in the form:
     * search term in double quotes (e.g. "transgender")
@@ -26,9 +26,9 @@ Click on the blue link between the search field and the search results. This wil
 
 ## Collecting Articles 
 
-To collect the full text of the articles, you will need to download and run a python script called `guardian_scraping.py`. You can find the script to download [here.](link) 
+To collect the full text of the articles, you will need to download and run a python script called `guardian_scraping.py`. You can find the script to download [here.]([link](https://github.com/simonleek00/practice/blob/main/Guardian/guardian_scraping.py)) 
 
-Put the `guardian_scraping.py` file into the "Guardian Search" folder. Into the same folder, download the file `guardian_results.csv`. This is the spreadsheet where the results will be added.  
+Put the `guardian_scraping.py` file into the "Guardian Search" folder. Into the same folder, download the file [guardian_results.csv](https://github.com/simonleek00/practice/blob/main/Guardian/guardian_results.csv). This is the spreadsheet where the results will be added.  
 
 If you have not already, download a recent version of python3 from [this link](https://www.python.org/downloads/).
 
