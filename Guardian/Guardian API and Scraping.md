@@ -48,4 +48,4 @@ python3 guardian_scraping.py
 The program is finished when it prints into the terminal the phrase "Scraping Done!" 
 From your file browser, double click to open the `guardian_results.csv` file. It should now be populated with the articles from your search results, complete with dates, titles, urls, and the article's full text! 
 
-[final results](final.png)
+![final results](final.png)
