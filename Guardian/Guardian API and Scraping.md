@@ -26,9 +26,9 @@ Click on the blue link between the search field and the search results. This wil
 
 ## Collecting Articles 
 
-To collect the full text of the articles, you will need to download and run a python script called `guardian_scraping.py`. You can find the script to download [here.]([link](https://github.com/simonleek00/practice/blob/main/Guardian/guardian_scraping.py)) 
+To collect the full text of the articles, you will need to download and run a python script called `guardian_scraping.py`. You can find the script to download [here.](https://github.com/simonleek00/practice/blob/main/Guardian/guardian_scraping.py)
 
-Put the `guardian_scraping.py` file into the "Guardian Search" folder. Into the same folder, download the file [guardian_results.csv](https://github.com/simonleek00/practice/blob/main/Guardian/guardian_results.csv). This is the spreadsheet where the results will be added.  
+Put the `guardian_scraping.py` file into the "Guardian Search" folder. Into the same folder, download the empty file [guardian_results.csv](https://github.com/simonleek00/practice/blob/main/Guardian/guardian_results.csv). This is the spreadsheet where the results will be added.  
 
 If you have not already, download a recent version of python3 from [this link](https://www.python.org/downloads/).
 
