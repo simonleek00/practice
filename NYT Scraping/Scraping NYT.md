@@ -19,6 +19,16 @@ To complete the setup, open a text editor (TextEdit will work fine) and save an 
 
 Navigate in the terminal to the "NYT Scraping" folder, either by right clicking and selecting "New Terminal at Folder" or by using `cd` commands to navigate to it. (For example, if it was in your documents folder, you would start with the command `cd Documents` and then type `cd "NYT Scraping"`).
 
+If you have not already, download a recent version of python3 from [this link](https://www.python.org/downloads/).
+
+Enter the following commands one by one to install the packages the program needs to run correctly: 
+
+```
+python3 -m pip install requests
+python3 -m pip install bs4
+python3 -m pip install lxml
+```
+
 Now type or paste into the terminal this command to run the program:
 
 ```
