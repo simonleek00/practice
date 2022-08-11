@@ -28,13 +28,19 @@ Now, click on the folder "Config" inside of the "NY Times API Scripts Final" fol
 ![unchangedconfig](unchangedconfig.png)
 
 You'll need to make some set up edits before refining your search:
+* Replace the string of text next to `api_key = ` with your own API key from earlier. 
 * Go to the "NY Times API Scripts Final" and copy the path name. To do this on Mac, press Command + Option + C. On Windows, press Alt + D and then Ctrl + C. 
 * Paste this in between the first and last "/" in each of the file paths in the config file, ie replacing the text `/Users/ashleychampagne/Desktop/nytimes_scripts/`. When you are done with this step, the file should look like this, but with your own file path instead of the placeholder there. 
 ![changedconfig](changedconfig.png)
 
+Now you can refine your search terms. The names of each variable explain what they control in the search. An example new search ready to be deployed might look like this: 
+![finalconfig](finalconfig.png)
 
+Decide what you want to search for and input the relevant terms and dates.  
 
 ## Running the Searcher
+
+Now that everything is set up, it's time to run our search. To do so, go back to the terminal. Enter the command `cd Desktop` and then `cd "NY Times API Scripts Final"`. Now that you have navigated to the folder with the [pick up HERE]
 
 
 ## Settiing up for Scraping 
