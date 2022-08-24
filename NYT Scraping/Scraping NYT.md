@@ -77,3 +77,6 @@ Now open the file `articlefulltext.csv`. You should see it populated with three 
 
 You can now save this file with a new name and proceed as you want with it! 
 
+### Next Steps
+
+To explore possible uses of the new article text data you've extracted, check out the libary's resources on [text mining.](https://libguides.brown.edu/text-mining)
