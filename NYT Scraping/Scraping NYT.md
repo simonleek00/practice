@@ -22,7 +22,7 @@ This workflow requires you to run pre-written python programs in order to search
 ## Setting up for Searching 
 Download the entire contents of the folder [NY Times API Scripts Final](https://drive.google.com/drive/folders/1vjO6bP7XOx_lNxN7-rzF1OqjY-L-RhlY). 
 ![downloadfolder](downloadfolder.png)
-Put this folder on your Desktop. 
+Put this folder on your Desktop. Within, add another empty folder named "json_files".
 
 Now, click on the folder "Config" inside of the "NY Times API Scripts Final" folder that you've just downloaded and moved to your desktop. Inside is a file named "settings.cfg". Right click and open with a text editor, for example TextEdit on Mac or Notepad on Windows. (If the text editor is not showing up when you right click, you can drag the file onto the application's icon in the bottom bar.) You will see a file that looks like this: 
 ![unchangedconfig](unchangedconfig.png)
@@ -40,13 +40,14 @@ Decide what you want to search for and input the relevant terms and dates.
 
 ## Running the Searcher
 
-Now that everything is set up, it's time to run our search. To do so, go back to the terminal. Enter the command `cd Desktop` and then `cd "NY Times API Scripts Final"`. Now that you have navigated to the folder with the [pick up HERE]
+Now that everything is set up, it's time to run our search. To do so, go back to the terminal. Enter the command `cd Desktop` and then `cd "NY Times API Scripts Final"`. Now that you have navigated to the folder where script is, you can type the command `python getTimesArticles_fq.py` and press enter. This will run the script that performs the search that you set up by changing the values in the config file. It will take a few minutes to run--longer, if your search term and date range is going to return a lot of results. You can always force quit the script by either quitting out of the Terminal or Command Prompt window or by pretting Ctrl+C. 
 
+When the script is done running, you should see some new files created in the folder "NY Times API Scripts Final": `success.log`, `output.tsv`, and the folder "json_files" will have some new files in it. For this tutorial, we are only going to use the `output.tsv` file, which you can double click on to open in a spreadsheet viewing app. It will look something like this: ![scriptresults](scriptresults.png)
 
-## Settiing up for Scraping 
+## Setting up for Scraping 
 After you have created a spreadsheet with the results of your NYT search, you may want to find the full text of these articles. 
 
-To do this, first select the column that contains the urls you want to scrape and copy it into a new spreadsheet. The new file should have just the one column containing the urls you want to visit. It should look like this:
+To do this, first select the column that contains the article urls. Copy the column and paste it into a new, empty spreadsheet. The new file will have just the one column containing the urls you want to visit. It should look like this:
 
 ![single column](singlecolumn.png)
 
